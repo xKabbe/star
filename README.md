@@ -3,12 +3,42 @@
 <h1 align="center">S.T.A.R. - Stratospheric Technology for Atmospheric Research</h1>
 
 <p align="center">
+   <a href="https://www.python.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/Python-3.12-44cc11?logo=python" /></a>
+   <a href="https://www.postgresql.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/MkDocs-grey?logo=materialformkdocs" /></a>
+</p>
+
+<p align="center">
    <a href="https://github.com/xKabbe/star/blob/master/LICENSE">
       <img alt="ShieldsIO Badge" src="https://img.shields.io/github/license/xKabbe/star?label=License&color=yellow" /></a>
    <a href="https://github.com/xKabbe/star/issues?q=is%3Aissue+is%3Aopen+">
       <img alt="ShieldsIO Badge" src="https://img.shields.io/github/issues-search/xKabbe/star?query=is%3Aopen+is%3Aissue&label=Open%20Issues&color=yellow"></a>
    <a href="https://github.com/xKabbe/star/issues?q=is%3Aissue+is%3Aclosed">
       <img alt="ShieldsIO Badge" src="https://img.shields.io/github/issues-search/xKabbe/star?query=is%3Aissue+is%3Aclosed&label=Closed%20Issues&color=green"></a>
+</p>
+
+<p align="center">
+   <a href="https://github.com/xKabbe/star/milestone/1">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/1"></a>
+   <a href="https://github.com/xKabbe/star/milestone/2">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/2"></a>
+   <a href="https://github.com/xKabbe/star/milestone/3">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/3"></a>
+   <a href="https://github.com/xKabbe/star/milestone/4">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/4"></a>
+   <a href="https://github.com/xKabbe/star/milestone/5">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/5"></a>
+   <a href="https://github.com/xKabbe/star/milestone/6">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/6"></a>
+   <a href="https://github.com/xKabbe/star/milestone/7">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/7"></a>
+   <a href="https://github.com/xKabbe/star/milestone/8">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/8"></a>
+   <a href="https://github.com/xKabbe/star/milestone/9">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/9"></a>
+   <a href="https://github.com/xKabbe/star/milestone/10">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/10"></a>
 </p>
 
 ## Overview
