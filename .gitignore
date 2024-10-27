@@ -1,0 +1,72 @@
+# Project specific files
+TODO.md
+
+# Node.js/Next.js related ignores (for any directory)
+node_modules/
+.next/
+.env.local
+.env.*.local
+.env
+.DS_Store
+dist/
+out/
+build/
+*.egg-info/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Test result folders
+test-results/
+test-output/
+test-reports/
+reports/
+output/
+coverage/
+htmlcov/
+.junit/
+logs/
+
+# Optional npm cache directory
+.npm/
+
+# Python related ignores (for any directory)
+__pycache__/
+*.env
+*.env.*
+.pytest_cache/
+.mypy_cache/
+instance/
+
+# Python log files
+coverage.xml
+.coverage
+.coverage.*
+nosetests.xml
+test_*.xml
+coverage_html/
+
+# Python virtual environment
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+**/*.py[cod]
+*.so
+**/*.so
+
+# IDE related ignores
+.vscode/
+.idea/
+*.swp
+*.swo
