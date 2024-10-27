@@ -17,6 +17,9 @@ theme:
         name: Switch to light mode
 nav:
   - Home: index.md
+  - Hardware: 
+    - Microcontroller: microcontroller.md
+    - Sensors: sensors.md
   - About:
     - About Us: about_us.md
     - License: license.md
