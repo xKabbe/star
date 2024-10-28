@@ -17,6 +17,11 @@ theme:
         name: Switch to light mode
 nav:
   - Home: index.md
+  - Software:
+    - General Tech Stack: general_tech_stack.md
+    - Dashboard: dashboard.md
+    - Backend: backend.md
+    - Simulator: simulator.md
   - About:
     - About Us: about_us.md
     - License: license.md
