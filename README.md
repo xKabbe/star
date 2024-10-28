@@ -126,3 +126,15 @@ The project will be conducted in three phases, each with its distinct focus:
 ## Potential Impact
 The S.T.A.R. project offers substantial contributions to scientific understanding and public awareness of space weather and atmospheric changes.
 The data collected will aid in developing predictive models for space weather impacts on Earth and offer educational opportunities in scientific methods and technology.
+
+## Roles and Responsibilities
+The project team consists of two core members, xKabbe and blckfox, each bringing unique expertise to the table:
+
+
+**xKabbe:**
+An experienced programmer with extensive knowledge of Python and other programming languages as well as data visualization. xKabbe is responsible for developing the software that will handle data processing from sensors and visualization. This ensures that data is effectively visualized and easily interpretable for analysis.
+
+**blckfox:**
+Specializes in IT infrastructure and data systems, with a strong focus on the hardware part, data collection, and microcontrollers as well as sensors. blckfox is in charge of setting up and maintaining the technical foundation of the messuring systems, making sure that all data collecting and storage solutions are robust and efficient.
+
+Together, our team covers both the hardware and software aspects of the project, providing a comprehensive approach to each stage, from design and development to deployment and analysis.
