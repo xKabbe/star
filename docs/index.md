@@ -1,3 +1,0 @@
-# S.T.A.R. Project
-
-Coming soon...
