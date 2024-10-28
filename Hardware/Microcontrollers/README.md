@@ -2,7 +2,7 @@
 
 For our atmospheric and space weather research project, we have decided to use the **ESP32-S3** microcontroller as the core component for data processing and storage. Below, we outline the key benefits of the ESP32-S3 and why it’s an ideal fit for our project’s requirements.
 
-![esp32-s3](images/esp32-s3.jpg)
+![esp32-s3](../../assets/hardware/esp32-s3.jpg)
 
 ## Why ESP32-S3?
 
