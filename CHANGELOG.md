@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ## <a href="https://github.com/xKabbe/star/milestone/2"><img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/2"></a>
 
-...
+* [Document Hardware Technology Decisions](https://github.com/xKabbe/star/issues/40) 
 
 ## <a href="https://github.com/xKabbe/star/milestone/3"><img alt="ShieldsIO Badge" src="https://img.shields.io/github/milestones/progress-percent/xKabbe/star/3"></a>
 
