@@ -33,7 +33,7 @@ Before using this setup, make sure you have the following installed:
 
 To create, run and manage the Docker environment, it is necessary to provide some basic configuration via `.env` files in:
 
-* [.env](./metrics/grafana/.env) in `/grafana`
+* [.env](./grafana/.env) in `/grafana`
 
     ```dotenv
     # Grafana Security
@@ -47,13 +47,13 @@ To create, run and manage the Docker environment, it is necessary to provide som
     GF_DATABASE_PASSWORD=...
     ```
 
-* [.env](./db/influxdb/.env) in `/grafana`
+* [.env](./db/influxdb/.env) in `/db/influxdb`
 
     ```dotenv
     ...
     ```
 
-* [.env](./db/postgresql/.env) in `/postgresql`
+* [.env](./db/postgresql/.env) in `/db/postgresql`
 
     ```dotenv
     # PostgreSQL Security
@@ -78,10 +78,22 @@ The following services are being used for:
 
 The provided `Makefile` automates the following operations:
 
-| Command       | Description                                            |
-|---------------|--------------------------------------------------------|
-| `make start`  | Start network and services                             |
-| `make stop`   | Stop services                                          |
-| `make status` | Check services status                                  |
-| `make logs`   | Show logs for services                                 |
-| `make clean`  | Clean all resources: containers, networks, and volumes |
+| Command             | Description                               |
+|---------------------|-------------------------------------------|
+| `help`              | Show available make commands              |
+| `network`           | Create Docker network if it doesn't exist |
+| `start`             | Start all services                        |
+| `start_grafana`     | Start Grafana service                     |
+| `start_dbs`         | Start database services                   |
+| `start_db_influx`   | Start InfluxDB service                    |
+| `start_db_postgres` | Start PostgreSQL service                  |
+| `start_backend`     | Start the backend service                 |
+| `stop`              | Stop all services                         |
+| `stop_grafana`      | Stop Grafana service                      |
+| `stop_dbs`          | Stop database services                    |
+| `stop_db_influx`    | Stop InfluxDB service                     |
+| `stop_db_postgres`  | Stop PostgreSQL service                   |
+| `stop_backend`      | Stop the backend service                  |
+| `status`            | Show status of all services               |
+| `logs`              | Show logs for all services                |
+| `clean`             | Clean up resources                        |

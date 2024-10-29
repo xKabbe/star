@@ -1,4 +1,4 @@
-# Metrics
+# Grafana
 
 This module provides the visualization stack for the project.
 It uses Grafana to visualize telemetry data, both real-time and historical, from the weather balloon project.
