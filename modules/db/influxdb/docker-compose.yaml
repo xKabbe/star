@@ -1,0 +1,27 @@
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: star_influxdb
+    restart: always
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+    environment:
+      INFLUXDB_ADMIN_USER: ${INFLUXDB_ADMIN_USER}
+      INFLUXDB_ADMIN_PASSWORD: ${INFLUXDB_ADMIN_PASSWORD}
+      INFLUXDB_DB: ${INFLUXDB_DB}
+    networks:
+      - star_docker_network
+    healthcheck:
+      test: ["CMD", "influx", "ping"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+
+networks:
+  star_docker_network:
+    external: true
+
+volumes:
+  influxdb_data: {}

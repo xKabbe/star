@@ -1,5 +1,5 @@
 # Variables
-NETWORK_NAME = start_docker_network
+NETWORK_NAME = star_docker_network
 GRAFANA_DIR = ./modules/grafana
 INFLUXDB_DIR = ./modules/db/influxdb
 POSTGRESQL_DIR = ./modules/db/postgresql
@@ -24,7 +24,7 @@ network: ## Create Docker network if it doesn't exist
 start: start_grafana start_dbs start_backend ## Start all services
 	@echo "Starting all services..."
 
-start_grafana: ## Start Grafana service
+start_grafana: network ## Start Grafana service
 	@echo "Starting Grafana service..."
 
 	@cd $(GRAFANA_DIR) && docker-compose up -d && \
@@ -35,7 +35,7 @@ start_grafana: ## Start Grafana service
 start_dbs: start_db_influx start_db_postgres ## Start database services
 	@echo "Starting database services..."
 
-start_db_influx: ## Start InfluxDB service
+start_db_influx: network ## Start InfluxDB service
 	@echo "Starting InfluxDB service..."
 
 	@cd $(INFLUXDB_DIR) && docker-compose up -d && \
@@ -51,7 +51,7 @@ start_db_postgres: network ## Start PostgreSQL service
 
 	@echo "PostgreSQL setup complete!"
 
-start_backend: ## Start the backend service
+start_backend: network ## Start the backend service
 	# TODO: Needs to be implemented
 	@echo "Not yet implemented..."
 
@@ -88,7 +88,7 @@ stop_backend: ## Stop the backend service
 status: ## Show status of all services
 	@echo "Showing status of all services..."
 
-	@for service in "star_grafana" "start_influxdb" "star_postgres"; do \
+	@for service in "star_grafana" "star_influxdb" "star_postgres"; do \
 		if docker ps --filter "name=$$service" --format '{{.Names}}' | grep -q "$$service"; then \
 			echo "✅ $$service is running"; \
 			docker ps --filter "name=$$service" --format '\
