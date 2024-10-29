@@ -45,5 +45,4 @@
 ### **Misc**
 - **Laboratory Power Solution** - 1x - [Reichelt](https://tinyurl.com/3tfyv2jr) (Cheaper alternative [Amazon](https://tinyurl.com/mr3e3r4n))
 
-
 ### Estimated price for components listed above (mentioned with link): 89,90€ (w/o Laboratory Power Solution)
