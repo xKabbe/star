@@ -6,7 +6,15 @@
    <a href="https://www.python.org/">
       <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/Python-3.12-44cc11?logo=python" /></a>
    <a href="https://www.postgresql.org/">
-      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/MkDocs-grey?logo=materialformkdocs" /></a>
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/FastAPI-grey?logo=fastapi" /></a>
+   <a href="https://www.postgresql.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/Grafana-grey?logo=grafana" /></a>
+   <a href="https://www.postgresql.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql" /></a>
+   <a href="https://www.postgresql.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/InfluxDB-grey?logo=influxdb" /></a>
+   <a href="https://www.postgresql.org/">
+      <img alt="ShieldsIO Badge" src="https://img.shields.io/badge/Docker-grey?logo=docker" /></a>
 </p>
 
 <p align="center">
