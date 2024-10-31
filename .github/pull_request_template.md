@@ -1,3 +1,5 @@
 # Description
 
-See #<issue_number>
+See:
+
+* #<issue_number>

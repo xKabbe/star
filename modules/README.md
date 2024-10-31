@@ -1,46 +1,99 @@
 # Project Modules
 
-The project is organized into three main modules, each serving a unique purpose within the overall architecture.
+The project is organized into four main modules, each serving a unique purpose within the overall architecture.
 Each module operates as an independent service but collaborates with the others to provide a complete system for data simulation, management, and visualization.
 
 ## Module Overview
 
-1. **[Dashboard](./dashboard/README.md)**  
-   This module provides data visualization and storage, using Grafana to visualize telemetry data and a database (PostgreSQL or InfluxDB) for data storage.
-   Ideal for monitoring both real-time and historical balloon data.
+1. **[Metrics](./metrics/README.md)**  
+   This module provides data visualization through Grafana, displaying real-time and historical telemetry data.
+   It integrates with the databases in the DB module to visualize balloon data, whether from simulations or real flights.
 
-2. **[Backend](./backend/README.md)**  
+2. **[DB](./db/README.md)**  
+   A dedicated module for data storage, containing PostgreSQL and InfluxDB to support telemetry data storage.
+   Both databases can be accessed by the backend for data management and by the metrics module for visualization.
+
+3. **[Backend](./backend/README.md)**  
    A FastAPI-powered backend that offers an API to manage and retrieve telemetry data.
-   The backend interacts with the database, exposing endpoints for accessing data and serving as the bridge between the data storage and the visualization layers.
+   The backend interacts with the DB module to expose endpoints for accessing data and serves as the bridge between data storage and visualization.
 
-3. **[Simulator](./simulator/README.md)**  
+4. **[Simulator](./simulator/README.md)**  
    This CLI-based module simulates telemetry data for testing.
-   It can generate real-time or historical data for backend and dashboard testing, allowing configuration options for flexible data generation.
+   It can generate real-time or historical data, providing flexible data generation for testing the backend and metrics modules.
 
-## Tech Stack
+## Prerequisites
 
-| Module        | Technology             | Purpose                                                                                |
-|---------------|------------------------|----------------------------------------------------------------------------------------|
-| **Dashboard** | Grafana                | Data visualization platform used for displaying live and historical telemetry data.    |
-|               | PostgreSQL or InfluxDB | Primary database for storing telemetry data from both real flights and simulated data. |
-|               | Docker                 | Containerization of the Dashboard for easy deployment and scalability.                 |
-| **Backend**   | Python                 | Core programming language for the backend API and simulator.                           |
-|               | FastAPI                | Web framework used to create RESTful APIs for accessing telemetry and other data.      |
-|               | PostgreSQL or InfluxDB | Database to store, retrieve, and manage telemetry data.                                |
-|               | SQLAlchemy             | Object-relational mapper (ORM) for managing database interactions.                     |
-|               | Docker                 | Containerization for deployment and environment consistency.                           |
-| **Simulator** | Typer                  | CLI tool for managing command-line interactions with the simulation program.           |
-|               | Python                 | Language used for data generation and processing.                                      |
-|               | FastAPI                | API calls to the backend to simulate real-time data handling.                          |
-|               | Pandas                 | Library for data manipulation and simulation preparation.                              |
-|               | NumPy                  | Library for numerical computations in data generation.                                 |
-|               | Docker                 | Containerization for environment consistency and deployment.                           |
+Before using this setup, make sure you have the following installed:
 
-## Toolin
+* [Docker](https://www.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
+* [Make](https://makefiletutorial.com/)
 
-| Category            | Technology                | Purpose                                                                    |
-|---------------------|---------------------------|----------------------------------------------------------------------------|
-| **Testing**         | pytest                    | Unit and integration testing across modules.                               |
-| **Version Control** | Git + GitHub              | Version control and collaboration platform.                                |
-| **Configuration**   | YAML, `.env`              | Configuration files and environment variables management.                  |
-| **Alerting**        | Grafana Alerts (optional) | Configurable alerts within Grafana for specific telemetry data thresholds. |
+### Configuration
+
+To create, run and manage the Docker environment, it is necessary to provide some basic configuration via `.env` files in:
+
+* [.env](./grafana/.env) in `/grafana`
+
+    ```dotenv
+    # Grafana Security
+    GF_SECURITY_ADMIN_USER=...
+    GF_SECURITY_ADMIN_PASSWORD=...
+    # Grafana Database Connection (PostgreSQL)
+    GF_DATABASE_TYPE=...
+    GF_DATABASE_HOST=...
+    GF_DATABASE_NAME=...
+    GF_DATABASE_USER=...
+    GF_DATABASE_PASSWORD=...
+    ```
+
+* [.env](./db/influxdb/.env) in `/db/influxdb`
+
+    ```dotenv
+    ...
+    ```
+
+* [.env](./db/postgresql/.env) in `/db/postgresql`
+
+    ```dotenv
+    # PostgreSQL Security
+    POSTGRES_USER: ...
+    POSTGRES_PASSWORD: ...
+    POSTGRES_DB: ...
+    ```
+
+### Purpose
+
+The following services are being used for:
+
+* `Grafana` for real-time data visualization and monitoring.
+            This service provides interactive dashboards that display live sensor data and historical information, allowing us to monitor the balloon's performance and environmental conditions during flight.
+* `InfluxDB` for storing time-series data.
+             This database is optimized for high-volume, time-stamped data, making it ideal for collecting real-time telemetry from sensors.
+             It also integrates seamlessly with Grafana for efficient querying and visualization.
+* `PostgreSQL` for long-term data archiving and structured storage.
+               This relational database is used to store processed and finalized data after flight, making it accessible for future analysis, reporting, and backup.
+
+### [Makefile](../Makefile) Usage
+
+The provided `Makefile` automates the following operations:
+
+| Command             | Description                               |
+|---------------------|-------------------------------------------|
+| `help`              | Show available make commands              |
+| `network`           | Create Docker network if it doesn't exist |
+| `start`             | Start all services                        |
+| `start_grafana`     | Start Grafana service                     |
+| `start_dbs`         | Start database services                   |
+| `start_db_influx`   | Start InfluxDB service                    |
+| `start_db_postgres` | Start PostgreSQL service                  |
+| `start_backend`     | Start the backend service                 |
+| `stop`              | Stop all services                         |
+| `stop_grafana`      | Stop Grafana service                      |
+| `stop_dbs`          | Stop database services                    |
+| `stop_db_influx`    | Stop InfluxDB service                     |
+| `stop_db_postgres`  | Stop PostgreSQL service                   |
+| `stop_backend`      | Stop the backend service                  |
+| `status`            | Show status of all services               |
+| `logs`              | Show logs for all services                |
+| `clean`             | Clean up resources                        |

@@ -80,9 +80,9 @@ body:
       label: "Expected Actions"
       description: "Please define the expected actions."
       value: |
-        - [ ] <action 1>
-        - [ ] <action 2>
-        - [ ] <action 3>
+        * [ ] <action 1>
+        * [ ] <action 2>
+        * [ ] <action 3>
     validations:
       required: true
   # Definition Of Done
@@ -92,6 +92,7 @@ body:
       label: "Definition Of Done"
       description: "Must be done and checked off before the completion of the issue."
       options:
+        - label: "Changelog entry added"
         - label: "Code adjusted"
         - label: "Tests adjusted and passing"
         - label: "Bug fixed"
