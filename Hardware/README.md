@@ -11,10 +11,12 @@
 - **Voltage Regulator and Protection Module** – 1x - [berrybase.de](https://tinyurl.com/mr3f82tz)
 
 ### **Atmospheric and Environmental Sensors**
-- **BME280** (Temperature, Humidity, Pressure) – 1x - [AliExpress](https://tinyurl.com/5d2355uu)
-- **VEML6075** (UV Sensor) – 1x - [botland.de](https://tinyurl.com/3n875zkb)
+- **BME280** (Temperature, Humidity, Pressure - inside) – 1x - [AliExpress](https://tinyurl.com/5d2355uu)
+- **BME680** (Temperature, Humidity, Pressure - outside) - x1 - [Amazon](https://tinyurl.com/yc7882nt)
+- OUTDATED! **VEML6075** (UV Sensor) – 1x - [botland.de](https://tinyurl.com/3n875zkb)
+- **LTR390** (UV Sensor) - 1x - [Amazon](https://tinyurl.com/jz49evyr)
 - **HMC5883L** (Magnetometer) – 1x - [botland.de](https://tinyurl.com/u9dxfzah)
-- **Geiger Counter** (Radiation Sensor) – 1x - (possible DIY, later stage of project)
+- **Geiger Counter** (Radiation Sensor) – 1x - [botland.de](https://tinyurl.com/2xyd22tk)
 - **CCS811** (CO2 and Air Quality Sensor) – 1x - [berrybase.de](https://tinyurl.com/3nzbmwf9)
 
 ### **Positioning and Motion Sensors**
